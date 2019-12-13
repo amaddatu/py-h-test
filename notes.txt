@@ -16,6 +16,7 @@ pip install flask
 pip install flask_sqlalchemy
 pip install gunicorn
 pip install psycopg2
+pip install pandas
 
 # this command should be run after any change
 pip freeze > requirements.txt
@@ -30,6 +31,9 @@ git push
 git push --set-upstream origin master
 
 heroku create
+
+# log into heroku and add the database postgres at this point
+
 git remote -v
 git push heroku master
 
@@ -40,3 +44,6 @@ git status
 git commit -m "Insert... useful commit message here"
 git push
 git push heroku master
+
+# initialize the database / you can also add seed data into this init file
+heroku run python initdb.py

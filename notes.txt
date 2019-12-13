@@ -1,0 +1,7 @@
+# added alias for the anaconda prompt so that gitbash can start anaconda prompts
+
+# added a run_win.bat with env and script setup
+
+pip install flask
+pip install flask_sqlalchemy
+pip install gunicorn

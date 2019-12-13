@@ -2,6 +2,41 @@
 
 # added a run_win.bat with env and script setup
 
+# only for windows
+condaprompt
+
+# all operating systems
+conda create -n pet_pals_env python=3.7
+
+# activate your selected environment
+activate pet_pals_env
+
+# install all your packages
 pip install flask
 pip install flask_sqlalchemy
 pip install gunicorn
+pip install psycopg2
+
+# this command should be run after any change
+pip freeze > requirements.txt
+
+# initializes an empty git repository
+git init
+git remote add origin https://github.com/amaddatu/py-h-test.git
+git add .
+git status
+git commit -m "Initial commit"
+git push
+git push --set-upstream origin master
+
+heroku create
+git remote -v
+git push heroku master
+
+# commit additional changes via the following
+
+git add .
+git status
+git commit -m "Insert... useful commit message here"
+git push
+git push heroku master

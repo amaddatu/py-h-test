@@ -1,17 +1,22 @@
+# for windows only
 # added alias for the anaconda prompt so that gitbash can start anaconda prompts
+# right click on the shortcut for anaconda prompt
+# copy the command
+# change the command and copy it to the .bashrc file for gitbash
 
+# changes for this version... I added a run_win for windows users
 # added a run_win.bat with env and script setup
 
 # only for windows
 condaprompt
 
-# all operating systems
+# all operating systems use the following commands
 conda create -n pet_pals_env python=3.7
 
 # activate your selected environment
 activate pet_pals_env
 
-# install all your packages
+# install all your packages (for some mac users use "pip3 install ...")
 pip install flask
 pip install flask_sqlalchemy
 pip install gunicorn
